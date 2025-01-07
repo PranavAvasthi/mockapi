@@ -134,7 +134,7 @@ const mockProductResponse = {
   products: [
     {
       id: 1,
-      title: "MB Whey protien",
+      title: "MB Whey protein",
       imageUrl: "../assets/images/product-image.png",
       sponsored: true,
       rating: {
@@ -145,7 +145,7 @@ const mockProductResponse = {
     },
     {
       id: 2,
-      title: "MB Whey protien",
+      title: "MB Whey protein",
       imageUrl: "../assets/images/product-image.png",
       sponsored: false,
       rating: {
@@ -156,7 +156,7 @@ const mockProductResponse = {
     },
     {
       id: 3,
-      title: "MB Whey protien",
+      title: "MB Whey protein",
       imageUrl: "../assets/images/product-image.png",
       sponsored: true,
       rating: {
@@ -167,7 +167,7 @@ const mockProductResponse = {
     },
     {
       id: 4,
-      title: "MB Whey protien",
+      title: "MB Whey protein",
       imageUrl: "../assets/images/product-image.png",
       sponsored: false,
       rating: {
@@ -178,7 +178,7 @@ const mockProductResponse = {
     },
     {
       id: 5,
-      title: "MB Whey protien",
+      title: "MB Whey protein",
       imageUrl: "../assets/images/product-image.png",
       sponsored: true,
       rating: {
@@ -189,7 +189,7 @@ const mockProductResponse = {
     },
     {
       id: 6,
-      title: "MB Whey protien",
+      title: "MB Whey protein",
       imageUrl: "../assets/images/product-image.png",
       sponsored: false,
       rating: {
@@ -200,7 +200,7 @@ const mockProductResponse = {
     },
     {
       id: 7,
-      title: "MB Whey protien",
+      title: "MB Whey protein",
       imageUrl: "../assets/images/product-image.png",
       sponsored: false,
       rating: {
@@ -211,7 +211,7 @@ const mockProductResponse = {
     },
     {
       id: 8,
-      title: "MB Whey protien",
+      title: "MB Whey protein",
       imageUrl: "../assets/images/product-image.png",
       sponsored: true,
       rating: {
@@ -222,7 +222,7 @@ const mockProductResponse = {
     },
     {
       id: 9,
-      title: "MB Whey protien",
+      title: "MB Whey protein",
       imageUrl: "../assets/images/product-image.png",
       sponsored: true,
       rating: {
@@ -233,7 +233,7 @@ const mockProductResponse = {
     },
     {
       id: 10,
-      title: "MB Whey protien",
+      title: "MB Whey protein",
       imageUrl: "../assets/images/product-image.png",
       sponsored: false,
       rating: {
@@ -244,7 +244,7 @@ const mockProductResponse = {
     },
     {
       id: 11,
-      title: "MB Whey protien",
+      title: "MB Whey protein",
       imageUrl: "../assets/images/product-image.png",
       sponsored: true,
       rating: {
@@ -255,7 +255,7 @@ const mockProductResponse = {
     },
     {
       id: 12,
-      title: "MB Whey protien",
+      title: "MB Whey protein",
       imageUrl: "../assets/images/product-image.png",
       sponsored: true,
       rating: {
@@ -266,7 +266,7 @@ const mockProductResponse = {
     },
     {
       id: 13,
-      title: "MB Whey protien",
+      title: "MB Whey protein",
       imageUrl: "../assets/images/product-image.png",
       sponsored: true,
       rating: {
@@ -277,7 +277,7 @@ const mockProductResponse = {
     },
     {
       id: 14,
-      title: "MB Whey protien",
+      title: "MB Whey protein",
       imageUrl: "../assets/images/product-image.png",
       sponsored: false,
       rating: {
@@ -288,7 +288,7 @@ const mockProductResponse = {
     },
     {
       id: 15,
-      title: "MB Whey protien",
+      title: "MB Whey protein",
       imageUrl: "../assets/images/product-image.png",
       sponsored: true,
       rating: {
