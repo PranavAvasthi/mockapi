@@ -300,6 +300,16 @@ const mockProductResponse = {
   ],
 };
 
+const medicinesResponse = [
+  "Hem",
+  "Hemlibra",
+  "Haloperidol",
+  "Halozyme",
+  "Heml",
+  "Hemant",
+  "Hema",
+];
+
 app.get("/", (req, res) => {
   res.send("Server Health Check");
 });
@@ -310,6 +320,26 @@ app.get("/api/questions", (req, res) => {
 
 app.get("/api/products", (req, res) => {
   res.json(mockProductResponse);
+});
+
+app.get("/medicines", (req, res) => {
+  const search = req.query.search?.toLowerCase(); // Get search query parameter and convert to lowercase
+
+  if (!search) {
+    return res.status(400).json({
+      error: "Search query parameter is required.",
+    });
+  }
+
+  // Filter medicines based on the search query
+  const filteredMedicines = medicinesResponse.filter((medicine) =>
+    medicine.toLowerCase().includes(search)
+  );
+
+  res.json({
+    search,
+    results: filteredMedicines,
+  });
 });
 
 app.listen(PORT, () => {
