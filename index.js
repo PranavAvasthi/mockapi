@@ -351,7 +351,7 @@ app.get("/redirect/:id", (req, res) => {
   const id = req.params.id;
 
   // Get the corresponding deep link from the mapping
-  const deepLink = `com.geekyants.nutralis://products/${id}`;
+  const deepLink = `com.geekyants.nutralis:///products/${id}`;
 
   if (deepLink) {
     // Redirect to the deep link URL.
