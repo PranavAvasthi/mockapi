@@ -345,6 +345,26 @@ app.get("/medicines", (req, res) => {
   });
 });
 
+const fallbackUrl = "https://www.google.com"; // Fallback webpage if no deep link is found
+
+app.get("/redirect/:id", (req, res) => {
+  const id = req.params.id;
+
+  // Get the corresponding deep link from the mapping
+  const deepLink = `com.geekyants.nutralis://products/${id}`;
+
+  if (deepLink) {
+    // Redirect to the deep link URL.
+    // This will attempt to open the app if installed.
+    console.log(`Redirecting to deep link: ${deepLink}`);
+    res.redirect(deepLink);
+  } else {
+    // If the deep link isn't found, fallback to the default URL.
+    console.log(`Deep link not found for id: ${id}. Redirecting to fallback.`);
+    res.redirect(fallbackUrl);
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
