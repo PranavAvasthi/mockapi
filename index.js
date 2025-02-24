@@ -352,18 +352,30 @@ app.get("/redirect/:id", (req, res) => {
   console.log('id',id);
 
   // Get the corresponding deep link from the mapping
-  const deepLink = `com.geekyants.nutralis://products/${id}`;
+  const deepLinkAndroid = `com.geekyants.nutralis://products/${id}`;
+  const deepLinkIOS = `com.googleusercontent.apps.82791923588-hfh32ljr9di953362c6qp6j0e3621qik://products/${id}`;
+  // User-Agent detection for platform-specific redirection
+  const userAgent = req.get("User-Agent");
 
-  if (deepLink) {
-    // Redirect to the deep link URL.
-    // This will attempt to open the app if installed.
-    console.log(`Redirecting to deep link: ${deepLink}`);
-    res.redirect(deepLink);
+  if (/android/i.test(userAgent)) {
+    return res.redirect(deepLinkAndroid);
+  } else if (/iphone|ipad|ipod/i.test(userAgent)) {
+    return res.redirect(deepLinkIOS);
   } else {
-    // If the deep link isn't found, fallback to the default URL.
-    console.log(`Deep link not found for id: ${id}. Redirecting to fallback.`);
-    res.redirect(fallbackUrl);
+    return res.redirect(fallbackUrl);
   }
+
+
+  // if (deepLink) {
+  //   // Redirect to the deep link URL.
+  //   // This will attempt to open the app if installed.
+  //   console.log(`Redirecting to deep link: ${deepLink}`);
+  //   res.redirect(deepLink);
+  // } else {
+  //   // If the deep link isn't found, fallback to the default URL.
+  //   console.log(`Deep link not found for id: ${id}. Redirecting to fallback.`);
+  //   res.redirect(fallbackUrl);
+  // }
 });
 
 app.listen(PORT, () => {
