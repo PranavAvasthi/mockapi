@@ -349,9 +349,10 @@ const fallbackUrl = "https://www.google.com"; // Fallback webpage if no deep lin
 
 app.get("/redirect/:id", (req, res) => {
   const id = req.params.id;
+  console.log('id',id);
 
   // Get the corresponding deep link from the mapping
-  const deepLink = `com.geekyants.nutralis:///products/${id}`;
+  const deepLink = `com.geekyants.nutralis://products/${id}`;
 
   if (deepLink) {
     // Redirect to the deep link URL.
